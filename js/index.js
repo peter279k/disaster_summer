@@ -13,7 +13,7 @@ $(function() {
 	$.getJSON("https://tcgbusfs.blob.core.windows.net/blobfs/GetDisasterSummary.json", function(data) {
 		case_data = data["DataSet"]["diffgr:diffgram"]["0"]["NewDataSet"]["0"]["CASE_SUMMARY"];
 		var str = "";
-		str += "<thead><tr><th>發生時間</th><th>詳細位置</th><th>所在區</th><th>描述</th></tr></thead>";
+		str += "<thead><tr><th>發生時間</th><th>詳細位置</th><th>所在區</th><th>描述</th><th>案件情形</th></tr></thead>";
 		str += "<tbody>";
 		
 		$("#attention-count").html("");
@@ -28,14 +28,17 @@ $(function() {
 			str += "<td>"+case_data[count]["CaseLocationDescription"]+"</td>";
 			str += "<td>"+case_data[count]["CaseLocationDistrict"]+"</td>";
 			str += "<td>"+case_data[count]["CaseDescription"]+"</td>";
-			str += "</tr>";
 			
 			if(case_data[count]["CaseComplete"] == "true") {
 				case_over += 1;
+				str += "<td>已結案</td>";
 			}
 			else {
 				case_ing += 1;
+				str += "<td>未結案</td>";
 			}
+			
+			str += "</tr>";
 		}
 	
 		$("#attention-over").html("目前結案總數: "+case_over);
