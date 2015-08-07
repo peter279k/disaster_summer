@@ -1,0 +1,35 @@
+.ui-table-columntoggle-btn {
+    display: none !important;
+}
+
+.attention-over {
+	color: #663300;
+}
+
+.attention {
+	color: #800000;
+}
+
+.attention-ing {
+	color: #33CC33;
+}
+
+.disaster-table thead th,
+.disaster-table tbody tr:last-child {
+    border-bottom: 1px solid #d6d6d6; /* non-RGBA fallback */
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.disaster-table tbody th,
+.disaster-table tbody td {
+    border-bottom: 1px solid #e6e6e6; /* non-RGBA fallback  */
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+.disaster-table tbody tr:last-child th,
+.disaster-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+.disaster-table tbody tr:nth-child(odd) td,
+.disaster-table tbody tr:nth-child(odd) th {
+    background-color: #eeeeee; /* non-RGBA fallback  */
+    background-color: rgba(0,0,0,.04);
+}
