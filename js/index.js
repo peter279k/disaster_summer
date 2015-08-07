@@ -28,7 +28,6 @@ $(function() {
 			str += "<td>"+case_data[count]["CaseLocationDescription"]+"</td>";
 			str += "<td>"+case_data[count]["CaseLocationDistrict"]+"</td>";
 			str += "<td>"+case_data[count]["CaseDescription"]+"</td>";
-			str += "</tr>";
 			
 			if(case_data[count]["CaseComplete"] == "true") {
 				case_over += 1;
@@ -38,6 +37,8 @@ $(function() {
 				case_ing += 1;
 				str += "<td>未結案</td>";
 			}
+			
+			str += "</tr>";
 		}
 	
 		$("#attention-over").html("目前結案總數: "+case_over);
