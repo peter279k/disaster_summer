@@ -10,7 +10,7 @@ $(function() {
 	var case_over = 0;
 	var case_ing = 0;
 	
-	$.getJSON("http://tonyq.org/kptaipei/GetDisasterSummary-20150808.php", function(data) {
+	$.getJSON("http://peter279k.com/xml_converter/xml_handler.php", function(data) {
 		case_data = data["DataSet"]["diffgr:diffgram"]["0"]["NewDataSet"]["0"]["CASE_SUMMARY"];
 		var str = "";
 		str += "<thead><tr><th>發生時間</th><th>詳細位置</th><th>所在區</th><th>描述</th><th>案件情形</th></tr></thead>";
