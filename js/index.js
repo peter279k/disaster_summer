@@ -22,6 +22,11 @@ $(function() {
 		
 		$("#attention-count").html("目前案件總數: "+case_data.length);
 		
+		if(case_data.length == 0) {
+			$("#attention-count").html('已全數結案');
+			return;
+		}
+		
 		for(var count=0;count<case_data.length;count++) {
 			str += "<tr>";
 			str += "<td>"+case_data[count]["CaseTime"]+"</td>";
